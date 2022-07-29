@@ -21,7 +21,7 @@
 #DB - Magic Shop contains 1 manufacturer to many products... I.E William the bloody, ring of Armarah, NB Hair gel
     #DROP TABLE IF EXISTS Products
     #DROP TABLE IF EXISTS Suppliers
-    #Manufacturers = Registered company name, Contact name, Human (Boolean)
+    #Manufacturers = Company name, Contact name, Human (Boolean)
     #Products = name, description, stock quantity, buying cost, selling price
 
 #Models - Suppliers and Products classes
