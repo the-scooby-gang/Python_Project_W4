@@ -1,13 +1,5 @@
-DROP TABLE IF EXISTS suppliers;
 DROP TABLE IF EXISTS products;
-
-CREATE TABLE products(
-    id SERIAL PRIMARY KEY,
-    description VARCHAR(255),
-    stock_quantity INT,
-    buyer_cost INT,
-    resale_price INT
-);
+DROP TABLE IF EXISTS suppliers;
 
 CREATE TABLE suppliers(
     id SERIAL PRIMARY KEY,
@@ -15,3 +7,15 @@ CREATE TABLE suppliers(
     contact_name VARCHAR(255),
     human BOOLEAN
 );
+
+CREATE TABLE products(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    description VARCHAR(255),
+    stock_quantity INT,
+    buyer_cost INT,
+    resale_price INT,
+    supplier_id INT NOT NULL REFERENCES suppliers(id)
+
+);
+

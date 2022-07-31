@@ -4,8 +4,8 @@ from models.suppliers import Supplier
 import repositories.supplier_repository as supplier_repository
 
 def save(product):
-    sql = "INSERT INTO products (name, description, stock_quantity, buyer_cost, resale_price, supplier_id) VALUES (%s, %s, %s, %s, %s, %s"
-    values = [product.name, product.description, product.stock_quantity, product.buyer_cost, product.resale_cost, product.supplier.id]
+    sql = "INSERT INTO products (name, description, stock_quantity, buyer_cost, resale_price, supplier_id) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
+    values = [product.name, product.description, product.stock_quantity, product.buyer_cost, product.resale_price, product.supplier.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     product.id = id
