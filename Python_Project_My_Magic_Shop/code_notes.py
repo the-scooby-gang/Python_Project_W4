@@ -1,7 +1,7 @@
 #REMEMBER TO LOOK AT OLD NOTES ( Week4 Day3 Full_Task...blah blah is a great example and where you took all your notes)
 #Controllers = 
     #Products
-        #HomeRoute - (link to base html)(and show home page with nav links)
+        #COMPLETE! HomeRoute - (link to base html)(and show home page with nav links)
         #ProductsRoute = (link to index html)(and show list of products with manufacturer highlighted and product highlighted)
         #New_ProductRoute = (GET)(link to new html)(and allows us to get to the new form to add a new product)
         #ProductsRoute = (POST) (allow us to submit the details on the form, add the product to the list and then redirect to the Products tab)
@@ -18,30 +18,32 @@
 
 #CSS - Read Notoes (Don't worry about this too much, we can tinker towards the end)
 
+#COMPLETE:
 #DB - Magic Shop contains 1 manufacturer to many products... I.E William the bloody, ring of Armarah, NB Hair gel
     #DROP TABLE IF EXISTS Products
     #DROP TABLE IF EXISTS Suppliers
     #Manufacturers = Company name, Contact name, Human (Boolean)
     #Products = name, description, stock quantity, buying cost, selling price
 
+#COMPLETE
 #Models - Suppliers and Products classes
     #See DB notes, remember to pass in self
     #Products needs an if/else for low/out of stock - ask instructors about this
 
 #Repositories
     #Products
-        #Save
-        #Select_all
-        #Select (one) (IF)
-        #Delete_all
-        #Delete(one)
+        #Save - Complete
+        #Select_all - Complete
+        #Select (one) (IF) - Complete
+        #Delete_all - Complete
+        #Delete(one) - Complete
         #Update_Product
     #Suppliers
-        #Save
-        #Select_all
-        #Select(one) (IF)
-        #Delete_all
-        #Delete(one)
+        #Save - Complete
+        #Select_all - Complete
+        #Select(one) (IF) - Complete
+        #Delete_all - Complete
+        #Delete(one) - Complete
         #Update_Supplier
         #add_product_to_Supplier
 
@@ -60,11 +62,13 @@
             #new
             #show
 
+#COMPLETE:
 # #Flask =    FLASK_APP=app.py
 #             FLASK_ENV=development
 #             FLASK_RUN_HOST=127.0.0.1
 #             FLASK_RUN_PORT=4999
 
+#COMPLETE
 #App = 
         # from flask import Flask, render_template
         # from controllers.tasks_controller import products_blueprint 
@@ -76,6 +80,7 @@
         # if __name__ == '__main__':
         #     app.run(debug=True)
 
+#Need to add details
 #Console
     #Delete_All
     #Insert DB info:

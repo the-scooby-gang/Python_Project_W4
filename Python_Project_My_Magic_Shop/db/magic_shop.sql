@@ -13,5 +13,5 @@ CREATE TABLE suppliers(
     id SERIAL PRIMARY KEY,
     company_name VARCHAR(255),
     contact_name VARCHAR(255),
-    human BOOLEAN,  
+    human BOOLEAN
 );

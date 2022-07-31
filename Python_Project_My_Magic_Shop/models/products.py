@@ -9,5 +9,3 @@ class Product:
 
 
 
-    #Manufacturers = Company name, Contact name, Human (Boolean)
-    #Products = name, description, stock quantity, buying cost, selling price
