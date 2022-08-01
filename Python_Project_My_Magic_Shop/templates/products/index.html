@@ -7,9 +7,6 @@
         <li>
             <a href="/products/{{product.id}}">{{product.name}}</a>
         </li>
-        <li>
-            <a href="/products/{{product.supplier.id}}">{{product.supplier.company_name}}</a>
-        </li>
     </ul>
 
             <div>
@@ -17,14 +14,21 @@
             </div>
 
             <div>
-                {% if product.stock_quantity <= 3 %}
-                <div> In Stock </div>
+                {% if product.stock_quantity == 0 %}
+                <div> Out of Stock </div>
     
-                {% elif product.stock_quantity >= 2 %}
+                {% elif product.stock_quantity <= 2 %}
                 <div> Low Stock </div>
-                {% elif product == 0 %}
-                <div>Out of Stock</div>
+
+                {% else %}
+                <div>In Stock</div>
                 {% endif %}
+            </div>
+
+            <div class = "buttons">
+                <form class = "delete-form" action="/products/{{product.id}}/delete" method="POST">
+                    <button class = "delete">Delete</button>
+                </form>
             </div>
             
 

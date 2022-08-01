@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for supplier in all_suppliers %}
+<div class = "supplier">
+    <ul>
+        <li>
+            <a href="/suppliers/{{supplier.id}}">{{supplier.company_name}}</a>
+        </li>
+{{supplier.contact_name}}
+    </ul>
+</div>
+
+{% endfor %}
+{% endblock %}

@@ -17,7 +17,7 @@ def select_all():
     results = run_sql(sql)
     for row in results:
         supplier = supplier_repository.select(row['supplier_id'])
-        product = Product(row['name'], row['description'], row['stock_quantity'], row['buyer_cost'], row['resale_price'], supplier)
+        product = Product(row['name'], row['description'], row['stock_quantity'], row['buyer_cost'], row['resale_price'], supplier, row['id'])
         products.append(product)
     return products
 
@@ -29,7 +29,7 @@ def select(id):
     if results:
         result = results[0]
         supplier = supplier_repository.select(result['supplier_id'])
-        product = Product(result['name'], result['description'], result['stock_quantity'], result['buyer_cost'], result['resale_price'], supplier)
+        product = Product(result['name'], result['description'], result['stock_quantity'], result['buyer_cost'], result['resale_price'], supplier, result['id'])
     return product
 
 def delete_all():
@@ -40,6 +40,15 @@ def delete(id):
     sql = "DELETE FROM products WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def update(product):
+    sql = "UPDATE products SET (name, description, stock_quantity, buyer_cost, resale_price, supplier_id) = (%s, %s, %s, %s, %s, %s) WHERE id = %s "
+    values = [product.name, product.description, product.stock_quantity, product.buyer_cost, product.resale_price, product.supplier.id, product.id]
+    run_sql(sql,values)
+
+
+
+
 
     
 

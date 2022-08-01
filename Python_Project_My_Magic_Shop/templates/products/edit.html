@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/products/{{product.id}}" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{product.name}}">
+    </div>
+    <div>
+        <label for="stock_quantity">Stock Quantity:</label>
+        <input type="number" name="stock_quantity" id="stock_quantity" value="{{product.stock_quantity}}">
+    </div>
+    <div>
+        <label for="{{product.buyer_cost}}">Buyer Cost:</label>
+        <input type="number" name="buyer_cost" id="buyer_cost" value = "{{product.buyer_cost}}">
+    </div>
+    <div>
+        <label for="{{product.resale_price}}">Resale Cost:</label>
+        <input type="number" name="resale_price" id="resale_price" value = "{{product.resale_price}}">
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" cols="30" rows="5">{{product.description}}</textarea>
+    </div>
+    <div>
+        <label for="supplier_id">Supplier:</label>
+        <select name="supplier_id" id="supplier">
+            {% for supplier in all_suppliers %}
+            <option value="{{supplier.id}}"
+            {% if product.supplier.id == supplier.id %} selected="selected"{% endif %}>
+            {{ supplier.company_name }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+
+    <button type="submit">Update Product</button>
+</form>
+
+
+{% endblock %}

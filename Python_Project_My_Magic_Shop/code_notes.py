@@ -2,7 +2,7 @@
 #Controllers = 
     #Products
         #COMPLETE! HomeRoute - (link to base html)(and show home page with nav links)
-        #ProductsRoute = (link to index html)(and show list of products with manufacturer highlighted and product highlighted)
+        #COMPLETE! ProductsRoute = (link to index html)(and show list of products with manufacturer highlighted and product highlighted)
         #New_ProductRoute = (GET)(link to new html)(and allows us to get to the new form to add a new product)
         #ProductsRoute = (POST) (allow us to submit the details on the form, add the product to the list and then redirect to the Products tab)
         #Products<id>Route = (GET) (link to show html)(allows us to show a single product (contains full class details))
@@ -80,7 +80,7 @@
         # if __name__ == '__main__':
         #     app.run(debug=True)
 
-#Need to add details
+#COMPLETE
 #Console
     #Delete_All
     #Insert DB info:

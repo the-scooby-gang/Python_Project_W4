@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/suppliers/{{supplier.id}}" method="post">
+    <div>
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" name="company_name" value="{{supplier.company_name}}">
+    </div>
+    <div>
+        <label for="contact_name">Contact Name:</label>
+        <input type="text" name="contact_name" id="contact_name" value="{{supplier.contact_name}}">
+    </div>
+    <div>
+        <label for="human">Human:</label>
+        <select name="human" id="human">
+            <option value="True">True</option>
+            <option value="False">False</option>
+        </select>
+    </div>
+
+
+
+    <button type="submit">Update Product</button>
+</form>
+
+{% endblock %}

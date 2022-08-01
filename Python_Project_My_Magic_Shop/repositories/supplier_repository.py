@@ -16,8 +16,9 @@ def select_all():
     sql = "SELECT * FROM suppliers"
     results = run_sql(sql)
     for row in results:
-        supplier = Supplier(row['company_name'], row['contact_name'], row['human'])
+        supplier = Supplier(row['company_name'], row['contact_name'], row['human'], row['id'])
         suppliers.append(supplier)
+    return suppliers
 
 def select(id):
     supplier = None
@@ -26,7 +27,7 @@ def select(id):
     results = run_sql(sql, values)
     if results:
         result = results[0]
-        supplier = Supplier(result['company_name'], result['contact_name'], result['human'])
+        supplier = Supplier(result['company_name'], result['contact_name'], result['human'], result['id'])
     return supplier
 
 def delete_all():
@@ -37,5 +38,10 @@ def delete(id):
     sql = "DELETE FROM suppliers WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def update(supplier):
+    sql = "UPDATE suppliers SET (company_name, contact_name, human) = (%s, %s, %s) WHERE id = %s "
+    values = [supplier.company_name, supplier.contact_name, supplier.human, supplier.id]
+    run_sql(sql,values)
 
 
