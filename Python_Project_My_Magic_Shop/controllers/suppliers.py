@@ -43,3 +43,6 @@ def create():
     supplier = Supplier(company_name, contact_name, human)
     supplier_repository.save(supplier)
     return redirect('/suppliers')
+
+
+
