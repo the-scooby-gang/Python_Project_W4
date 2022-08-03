@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div>
+<div class="product">
     <ul>
         <li> <b>{{product.name}}</b></li>
         <li>{{product.description}}</li>
@@ -10,8 +10,8 @@
         <li>Selling Price: {{product.resale_price}}</li>
         <li>Supplier: {{product.supplier.company_name}}</li>
     </ul>
-    <form action="/products/{{product.id}}/edit" method = "POST">
-    <button type = 'edit'> Edit</button>
+    <form class="container" action="/products/{{product.id}}/edit" method = "POST">
+    <button type = 'edit'> <i class="fa-solid fa-pen-to-square" style="color:fuchsia"></i></button>
     </form>
 </div>
 

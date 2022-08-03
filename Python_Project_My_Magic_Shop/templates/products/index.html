@@ -10,24 +10,32 @@
     </ul>
 
             <div>
-                Buyer Cost = £{{product.buyer_cost}} : Resale Price = £{{product.resale_price}} : Available = {{product.stock_quantity}} : Supplier = {{product.supplier.company_name}}
+                <ul>
+                    <li>Buyer Cost = £{{product.buyer_cost}} </li>
+                    <li>Resale Price = £{{product.resale_price}}</li>
+                    <li>Available = {{product.stock_quantity}}</li>
+                    <li>Supplier = {{product.supplier.company_name}}</li>  
+                    <li>{% if product.stock_quantity == 0 %}
+                        Out of Stock
+            
+                        {% elif product.stock_quantity <= 2 %}
+                        Low Stock
+        
+                        {% else %}
+                        In Stock
+                        {% endif %}
+                    </li>            
+                
+                </ul>
             </div>
 
-            <div>
-                {% if product.stock_quantity == 0 %}
-                <div> Out of Stock </div>
-    
-                {% elif product.stock_quantity <= 2 %}
-                <div> Low Stock </div>
 
-                {% else %}
-                <div>In Stock</div>
-                {% endif %}
-            </div>
+
+        
 
             <div class = "buttons">
                 <form class = "delete-form" action="/products/{{product.id}}/delete" method="POST">
-                    <button class = "delete">Delete</button>
+                    <button class = "delete"><i class="fa-solid fa-trash-can" style="color:crimson"></i></button>
                 </form>
             </div>
             

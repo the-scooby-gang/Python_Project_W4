@@ -1,37 +1,37 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<form action="/products" method="post">
+<form class="forms" action="/products" method="post">
     <div>
         <label for="name">Name:</label>
-        <input type="text" name="name">
+        <input class="input" type="text" name="name">
     </div>
     <div>
         <label for="stock_quantity">Stock Quantity:</label>
-        <input type="number" name="stock_quantity" id="stock_quantity">
+        <input class="input" type="number" name="stock_quantity" id="stock_quantity">
     </div>
     <div>
         <label for="buyer_cost">Buyer Cost:</label>
-        <input type="number" name="buyer_cost" id="buyer_cost">
+        <input class="input" type="number" name="buyer_cost" id="buyer_cost">
     </div>
     <div>
         <label for="resale_price">Resale Price:</label>
-        <input type="number" name="resale_price" id="resale_price">
+        <input class="input" type="number" name="resale_price" id="resale_price">
     </div>
     <div>
         <label for="description">Description</label>
-        <textarea name="description" id="description" cols="30" rows="5"></textarea>
+        <textarea class="input" name="description" id="description" cols="30" rows="5"></textarea>
     </div>
     <div>
         <label for="supplier">Supplier:</label>
-        <select name="supplier_id" id="supplier_id">
+        <select class="input" name="supplier_id" id="supplier_id">
             {% for supplier in all_suppliers %}
                 <option value="{{supplier.id}}">{{supplier.company_name}}</option>
             {% endfor %}
         </select>
     </div>
 
-    <button type="submit">Add Product</button>
+    <button type="submit"><i class="fa-solid fa-wand-sparkles" style="color: fuchsia"></i></button>
 </form>
   
 {% endblock %}

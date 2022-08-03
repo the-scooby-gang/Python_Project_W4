@@ -1,23 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<form action="/suppliers" method="post">
+<form class="forms" action="/suppliers" method="post">
     <div>
         <label for="company_name">Company Name:</label>
-        <input type="text" name="company_name">
+        <input class="input" type="text" name="company_name">
     </div>
     <div>
         <label for="contact_name">Contact Name:</label>
-        <input type="text" name="contact_name">
+        <input class="input" type="text" name="contact_name">
     </div>
     <div>
         <label for="human">Human:</label>
-        <select name="human" id="human">
+        <select class="input" name="human" id="human">
             <option value="True">True</option>
             <option value="False">False</option>
         </select>
     </div>
-    <button type="submit">Add Supplier</button>
+    <button type="submit"><i class="fa-solid fa-wand-sparkles" style="color:fuchsia"></i></button>
 </form>
 
 {% endblock %}
