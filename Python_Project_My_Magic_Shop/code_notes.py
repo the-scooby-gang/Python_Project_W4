@@ -3,20 +3,20 @@
     #Products
         #COMPLETE! HomeRoute - (link to base html)(and show home page with nav links)
         #COMPLETE! ProductsRoute = (link to index html)(and show list of products with manufacturer highlighted and product highlighted)
-        #New_ProductRoute = (GET)(link to new html)(and allows us to get to the new form to add a new product)
-        #ProductsRoute = (POST) (allow us to submit the details on the form, add the product to the list and then redirect to the Products tab)
-        #Products<id>Route = (GET) (link to show html)(allows us to show a single product (contains full class details))
-        #PRoducts<id>EditRoute = (GET) (link to edit html)(takes us to the form to edit a product)
-        #Products<id>Route = (POST) (allows us to update the product and then return the new edited product)
-        #Products<id>DeleteRoute = (POST) = Makes the delete button work
+        #COMPLETE! New_ProductRoute = (GET)(link to new html)(and allows us to get to the new form to add a new product)
+        #COMPLETE! ProductsRoute = (POST) (allow us to submit the details on the form, add the product to the list and then redirect to the Products tab)
+        #COMPLETE! Products<id>Route = (GET) (link to show html)(allows us to show a single product (contains full class details))
+        #COMPLETE! PRoducts<id>EditRoute = (GET) (link to edit html)(takes us to the form to edit a product)
+        #COMPLETE! Products<id>Route = (POST) (allows us to update the product and then return the new edited product)
+        #COMPLETE! Products<id>DeleteRoute = (POST) = Makes the delete button work
     #Suppliers
-        #New_SuppliersRoute = (GET)(link to new html)(and allows us to get to the new form to add a new Supplier)
-        #SuppliersRoute = (POST) (allow us to submit the details on the form, add a new supplier to the list and then redirect to the Supppliers tab)
-        #Suppliers<id>Route = (GET) (link to show html)(allows us to show a single supplier (contains full class details))
-        #Suppliers<id>EditRoute = (GET) (links to edit html)(takes us to the form to edit a supplier)
-        #Suppliers<id>Route = (POST) (allows us to update the supplier and then return the new edited supplier)
+        #COMPLETE! New_SuppliersRoute = (GET)(link to new html)(and allows us to get to the new form to add a new Supplier)
+        #COMPLETE! SuppliersRoute = (POST) (allow us to submit the details on the form, add a new supplier to the list and then redirect to the Supppliers tab)
+        #COMPLETE! Suppliers<id>Route = (GET) (link to show html)(allows us to show a single supplier (contains full class details))
+        #COMPLETE! Suppliers<id>EditRoute = (GET) (links to edit html)(takes us to the form to edit a supplier)
+        #COMPLETE! Suppliers<id>Route = (POST) (allows us to update the supplier and then return the new edited supplier)
 
-#CSS - Read Notoes (Don't worry about this too much, we can tinker towards the end)
+#COMPLETE! CSS - Read Notoes (Don't worry about this too much, we can tinker towards the end)
 
 #COMPLETE:
 #DB - Magic Shop contains 1 manufacturer to many products... I.E William the bloody, ring of Armarah, NB Hair gel
@@ -37,17 +37,17 @@
         #Select (one) (IF) - Complete
         #Delete_all - Complete
         #Delete(one) - Complete
-        #Update_Product
+        #Update_Product - Complete
     #Suppliers
         #Save - Complete
         #Select_all - Complete
         #Select(one) (IF) - Complete
         #Delete_all - Complete
         #Delete(one) - Complete
-        #Update_Supplier
-        #add_product_to_Supplier
+        #Update_Supplier - Complete
+        #add_product_to_Supplier - Not Complete
 
-#Templates (look at tables for ease of styling)
+#COMPLETE! Templates (look at tables for ease of styling)
     # Base
     # Index
         #Products

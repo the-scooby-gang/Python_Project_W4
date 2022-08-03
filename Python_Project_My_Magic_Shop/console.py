@@ -34,3 +34,4 @@ product5 = Product("Burba Weed", "Stir into blood to make it hot and spicy", 16,
 product_repository.save(product5)
 
 pdb.set_trace()
+
