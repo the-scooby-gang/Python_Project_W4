@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="product">
-    <ul>
+    <ul style="list-style: None;">
         <li> <b>{{product.name}}</b></li>
         <li>{{product.description}}</li>
         <li>Quantity: {{product.stock_quantity}}</li>
@@ -10,8 +10,8 @@
         <li>Selling Price: {{product.resale_price}}</li>
         <li>Supplier: {{product.supplier.company_name}}</li>
     </ul>
-    <form class="container" action="/products/{{product.id}}/edit" method = "POST">
-    <button type = 'edit'> <i class="fa-solid fa-pen-to-square" style="color:fuchsia"></i></button>
+    <form action="/products/{{product.id}}/edit" method = "POST">
+    <button type = 'edit'> <i class="fa-solid fa-pen-to-square" style="color:purple"></i></button>
     </form>
 </div>
 

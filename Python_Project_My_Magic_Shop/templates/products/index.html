@@ -10,7 +10,7 @@
     </ul>
 
             <div>
-                <ul>
+                <ul style="list-style: None;">
                     <li>Buyer Cost = £{{product.buyer_cost}} </li>
                     <li>Resale Price = £{{product.resale_price}}</li>
                     <li>Available = {{product.stock_quantity}}</li>
@@ -35,7 +35,7 @@
 
             <div class = "buttons">
                 <form class = "delete-form" action="/products/{{product.id}}/delete" method="POST">
-                    <button class = "delete"><i class="fa-solid fa-trash-can" style="color:crimson"></i></button>
+                    <button class = "delete"><i class="fa-solid fa-trash-can" style="color:purple "></i></button>
                 </form>
             </div>
             

@@ -2,13 +2,13 @@
 {% block content %}
 
 <div class="product" >
-    <ul>
+    <ul style="list-style: None;">
         <li> <b>Company Name: {{supplier.company_name}}</b></li>
         <li>Contact Name: {{supplier.contact_name}}</li>
         <li>Human: {{supplier.human}}</li>
     </ul>
     <form action="/suppliers/{{supplier.id}}/edit" method = "POST">
-    <button type = 'edit'> <i class="fa-solid fa-pen-to-square" style="color:fuchsia"></i></button>
+    <button type = 'edit'> <i class="fa-solid fa-pen-to-square" style="color:purple"></i></button>
     </form>
 </div>
 

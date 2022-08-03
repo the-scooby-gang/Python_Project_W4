@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form class="forms "action="/suppliers/{{supplier.id}}" method="post">
+<form class="forms" action="/suppliers/{{supplier.id}}" method="post">
     <div>
         <label for="company_name">Company Name:</label>
         <input class="input" type="text" id="company_name" name="company_name" value="{{supplier.company_name}}">
@@ -21,7 +21,7 @@
 
 
 
-    <button type="submit"><i class="fa-solid fa-wand-sparkles" style="color:fuchsia"></i></button>
+    <button type="submit"><i class="fa-solid fa-wand-sparkles" style="color:purple"></i></button>
 </form>
 
 {% endblock %}
